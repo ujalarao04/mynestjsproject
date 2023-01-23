@@ -1,4 +1,3 @@
-import { AuthService } from './../auth/auth.service';
 import { User } from './../users/user.schema';
 import { UserUpdateDto } from './userUpdate.dto';
 import {Controller,Get,Post,Body,Param,UseGuards,Delete,Put,Req,Res} from '@nestjs/common';
@@ -38,9 +37,5 @@ import {AuthGuard} from '@nestjs/passport';
     ):Promise<User>{
     return this.userService.updateUser(id,updateData)
    }
-
-  
-
-  
-  }
+}
   

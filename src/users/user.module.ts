@@ -1,4 +1,3 @@
-//import { UserLog } from './userlog.entity';
 import { UserLog,UserLogSchema } from './user_log.schema';
 import { LoggerService } from './logger.service';
 import {Module} from '@nestjs/common';

@@ -8,7 +8,6 @@ import { AppService } from './app.service';
 @Module({
   imports: [MongooseModule.forRoot('mongodb+srv://ujalarao:urmilabalwant@cluster0.oshajvc.mongodb.net/techstack?retryWrites=true&w=majority'),
   MongooseModule.forFeature([{name:'user',schema:UserSchema}]),
-  //MongooseModule.forFeature([{name:'userhistory',schema:UserSchema}]),
   UserModule,
   AuthModule
   ],

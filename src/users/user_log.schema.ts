@@ -1,4 +1,3 @@
-//import { UserLog } from './userlog.entity';
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { HydratedDocument } from 'mongoose';
 export type UserLogDocument=HydratedDocument<UserLog>;

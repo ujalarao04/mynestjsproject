@@ -3,8 +3,7 @@ import {UserService} from 'src/users/user.service';
 import {Injectable} from '@nestjs/common';
 import {JwtService} from '@nestjs/jwt';
 import {HashService} from 'src/users/hash.service';
-//import { UserLogDto } from 'src/users/user-log.dto';
-  
+
   @Injectable()
   export class AuthService {
     constructor(private userService: UserService,
@@ -26,12 +25,11 @@ import {HashService} from 'src/users/hash.service';
         sub: user.id
       };
       //log  to database
-      this.logger.log({
+        this.logger.log({
         user_id: user.id,
         user_activity: "login",
-        created_at:new Date()
-        
-    })
+        created_at:new Date()})
+
       return {
         access_token: this.jwtService.sign(payload),
       };
